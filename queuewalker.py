@@ -183,7 +183,7 @@ def sendEmail(subject, msgContents, toEmailAddress=config['settings']['toEmail']
     msg['To'] = toEmailAddress
     msg.set_content(msgContents)
 
-    _ = input("Press Enter when ready to send email (DEBUG)")
+    #_ = input("Press Enter when ready to send email (DEBUG)")
 
     print (f'Sending email to "{toEmailAddress}"')
     print (f'Subject: "{subject}')
