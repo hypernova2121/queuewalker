@@ -111,9 +111,9 @@ def login():
     #Click character name (or handle lobby error)
     #Looks for the Backup Character Icon that is next to every character name
     if config['settings']['characterPosition'] == '1':
-        loc = findOnScreen('backup.png', retryNum=30, checkForError=True) #retryNum is high because it can take 30 seconds before an error might appear
+        loc = findOnScreen('character.png', retryNum=30, checkForError=True) #retryNum is high because it can take 30 seconds before an error might appear
     else:
-        loc = findOnScreen('backup.png', retryNum=30, checkForError=True, locateAll=True)
+        loc = findOnScreen('character.png', retryNum=30, checkForError=True, locateAll=True)
         loc = pyautogui.center(loc[int(config['settings']['characterPosition'])-1]) #find the backup icon that corresponds with characterPosition
     if loc == 'err': #if findOnScreen() returns 'err', an error was found by checkForErrorScreen()
         return #break out of login() to start entire login process over
